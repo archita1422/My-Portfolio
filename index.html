@@ -32,8 +32,13 @@
         font-size: 32px;
         font-weight: 700;
         /* background-color: rebeccapurple; */
-        color: #00416A;
+        color: #01558a;
+    }
 
+    nav div:hover {
+        font-size: 33px;
+        font-weight: 750;
+        color: #02629d;
     }
 
     nav ul {
@@ -81,9 +86,11 @@
     li:hover {
         cursor: pointer;
     }
-    a{
+
+    a {
         text-decoration: none;
     }
+
     a:link {
         color: #353935;
         /* Styles for unvisited links */
@@ -104,23 +111,84 @@
         color: #00416A;
         /* Styles when a link is being clicked */
     }
+
+    nav {
+        box-shadow: 0px 1px 5px #35393586;
+    }
+
+    .lines img {
+        visibility: hidden;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        nav {
+            /* background-color: tan; */
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            /* padding: 43px 0px 0px 0px; */
+        }
+
+        nav div {
+            margin: 0px 22px;
+        }
+
+        nav ul {
+            display: block;
+            /* border: 2px solid red; */
+        }
+
+        nav ul li {
+            /* border: 2px solid green; */
+        }
+
+        .lines img {
+            visibility: visible;
+            height: 30px;
+            /* background-color: red; */
+        }
+
+        nav ul {
+            /* visibility:hidden; */
+            display: grid;
+            justify-content: start;
+            width: 170px;
+            background-color: #fcf8f8;
+            box-shadow: 0px 1px 5px #35393586;
+        }
+    }
 </style>
 
 <body>
     <nav>
         <div>MyPortfolio</div>
-        <ul>
+        <div class="lines">
+            <img src="images/lines.png" alt="">
+        </div>
+        <ul class="menu">
             <a href="#home">
                 <li>Home</li>
             </a>
             <a href="#about">
                 <li>About</li>
             </a>
-            <a href="#qualifications"><li>Qualifications</li></a>
-            <a href="#experience"><li>Experience</li></a>
-            <a href="#projects"><li>Projects</li></a>
-            <a href="#contact"><li>Contact</li></a>
-            <a href="https://drive.google.com/file/d/1NJEX6Xs5k_vwf1CoG-ivhjgPCVxju55a/view?usp=sharing " target="_blank" ><button>Download CV <img src="images/cv.png"></button></a>
+            <a href="#qualifications">
+                <li>Qualifications</li>
+            </a>
+            <a href="#experience">
+                <li>Experience</li>
+            </a>
+            <a href="#projects">
+                <li>Projects</li>
+            </a>
+            <a href="#contact">
+                <li>Contact</li>
+            </a>
+            <a href="https://drive.google.com/file/d/1NJEX6Xs5k_vwf1CoG-ivhjgPCVxju55a/view?usp=sharing "
+                target="_blank"><button>Download CV <img src="images/cv.png"></button></a>
         </ul>
     </nav>
     <!-- <div class="home" id="home">
@@ -141,6 +209,7 @@
     <div class="contact" id="contact">
         i am about
     </div> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
