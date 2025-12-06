@@ -28,14 +28,14 @@
         font-size: larger;
     }
 
-    nav div {
+    .logo {
         font-size: 32px;
         font-weight: 700;
         /* background-color: rebeccapurple; */
         color: #01558a;
     }
 
-    nav div:hover {
+    .logo:hover {
         font-size: 33px;
         font-weight: 750;
         color: #02629d;
@@ -123,48 +123,68 @@
     }
 
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
         nav {
-            /* background-color: tan; */
             display: flex;
-            align-items: flex-start;
-            justify-content: space-around;
-            /* padding: 43px 0px 0px 0px; */
-        }
-
-        nav div {
-            margin: 0px 22px;
-        }
-
-        nav ul {
-            display: block;
-            /* border: 2px solid red; */
-        }
-
-        nav ul li {
-            /* border: 2px solid green; */
+            justify-content: space-between;
+            padding: 20px;
+            height: auto;
         }
 
         .lines img {
             visibility: visible;
-            height: 30px;
-            /* background-color: red; */
         }
 
-        nav ul {
-            /* visibility:hidden; */
-            display: grid;
-            justify-content: start;
-            width: 170px;
-            background-color: #fcf8f8;
-            box-shadow: 0px 1px 5px #35393586;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            /* background-color: rebeccapurple; */
+            color: #01558a;
         }
+
+        .logo:hover {
+            font-size: 25px;
+            font-weight: 750;
+            color: #02629d;
+        }
+
+        .menu {
+            /* visibility:hidden; */
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            display: grid;
+            width: 150px;
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            background-color: #ffffff;
+            padding: 90px 20px;
+
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+        }
+         /* When active class added */
+    .menu.active {
+        transform: translateX(0%);
+    }
+
+    .menu li {
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .menu a {
+        color: #353935;
+    }
     }
 </style>
 
 <body>
     <nav>
-        <div>MyPortfolio</div>
+        <div class="logo">MyPortfolio</div>
         <div class="lines">
             <img src="images/lines.png" alt="">
         </div>
