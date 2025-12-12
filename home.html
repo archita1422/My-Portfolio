@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archita Gupta</title>
+    <link rel="shortcut icon" href="images/portfolio icon 2.png" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafaf9;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            font-size: larger;
+            box-shadow: 0px 1px 5px #35393546;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #01558a;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            color: #02629d;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 34px;
+            font-size: 18px;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul button {
+            background-color: #E7E7E7;
+            padding: 6px 12px;
+            font-size: 15px;
+            color: #353935;
+            display: flex;
+            gap: 8px;
+            border-radius: 6px;
+            box-shadow: 0px 1px 5px #35393557;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav ul button img {
+            height: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #353935;
+        }
+
+        a:hover {
+            color: #00416A;
+            font-weight: 500;
+        }
+
+        /* HAMBURGER */
+        .lines img {
+            visibility: hidden;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .home {
+            min-height: 85vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .home .image img {
+            height: 260px;
+            width: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .home .image img:hover {
+            transform: scale(1.03);
+        }
+
+        .home .name span {
+            color: #013a63;
+            font-size: 36px;
+            font-weight: 700;
+            padding: 10px 35px;
+            background-color: #e8f4ff;
+            border-radius: 12px;
+            margin-top: 22px;
+            display: inline-block;
+        }
+
+        .home .title {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        .home .desc {
+            max-width: 700px;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #4b4b4b;
+        }
+
+        .home .buttons {
+            display: flex;
+            gap: 18px;
+            margin-top: 32px;
+        }
+
+        .home .buttons button {
+            padding: 12px 28px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            background-color: #013a63;
+            color: #ffffff;
+            cursor: pointer;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s ease;
+        }
+
+        .home .buttons button:hover {
+            background-color: #02548f;
+            transform: translateY(-2px);
+        }
+
+        .home .logos {
+            display: flex;
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .home .logos img {
+            height: 46px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .home .logos img:hover {
+            transform: scale(1.15);
+        }
+
+
+        /* RESPONSIVE MENU */
+        @media screen and (max-width: 1000px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 160px;
+                background-color: #ffffff;
+                box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
+                padding: 100px 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                transform: translateX(100%);
+                transition: transform 0.4s ease-in-out;
+            }
+
+            nav ul.active {
+                transform: translateX(0%);
+            }
+
+            .lines img {
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav>
+        <div class="logo">MyPortfolio</div>
+
+        <div class="lines">
+            <img src="images/lines.png" id="menuBtn">
+        </div>
+
+        <ul class="menu">
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#qualifications"><li>Qualifications</li></a>
+            <a href="#experience"><li>Experience</li></a>
+            <a href="#projects"><li>Projects</li></a>
+            <a href="#contact"><li>Contact</li></a>
+
+            <a href="https://drive.google.com/file/d/1NJEX6Xs5k_vwf1CoG-ivhjgPCVxju55a/view?usp=sharing" target="_blank">
+                <button>Download CV <img src="images/cv.png"></button>
+            </a>
+        </ul>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <div class="home" id="home">
+
+        <div class="image">
+            <img src="images/myphoto.jpg" alt="">
+        </div>
+
+        <div class="name"><span>Archita Gupta</span></div>
+
+        <div class="title">Full-Stack Developer</div>
+
+        <div class="desc">
+            I enjoy building clean, efficient, and well-designed digital products.
+            I naturally lean toward creativity — whether it's art, fashion, or design —
+            and that helps me bring strong aesthetics and attention to detail into my work.
+        </div>
+
+        <div class="buttons">
+            <button>Hire me</button>
+            <button>Download CV</button>
+        </div>
+
+        <div class="logos">
+            <img src="images/github.png" alt="">
+            <img src="images/linkedin.png" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const menu = document.querySelector(".menu");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

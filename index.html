@@ -74,7 +74,7 @@
     .home {
         height: 80vh;
         width: 100vw;
-        background-color: brown;
+        /* background-color: brown; */
     }
 
     .about {
@@ -83,7 +83,8 @@
         background-color: rgb(42, 151, 165);
     }
 
-    li:hover {
+    li:hover,
+    button:hover {
         cursor: pointer;
     }
 
@@ -121,6 +122,75 @@
         height: 30px;
         cursor: pointer;
     }
+    
+        .home .image {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .home .name {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .home .name span {
+            color: #E7E7E7;
+            font-size: 25px;
+            padding: 4px 32px;
+            /* border: 2px solid green; */
+            border-radius: 12px;
+            background-color:#00416ad8;
+        }
+
+        .home .image img {
+            height: 200px;
+            /* width: 200px; */
+            border-radius: 172px;
+        }
+        .home .desc{
+            margin: 42px 32px 12px 32px;
+            justify-content: center;
+            color: #353935;
+            text-align: center;
+        }
+        .home .buttons{
+            display: flex;
+            /* border: 2px solid green; */
+            justify-content: center;
+            gap: 12px;
+            /* margin: 12px; */
+        }
+        .home .buttons button{
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: none;
+            background-color:#353935;
+            color: #E7E7E7;
+        }
+        .home .logos{
+            display: flex;
+            justify-content: center;
+            margin: 52px;
+            gap: 12px;
+        }
+        .home .logos img {
+            height: 52px;
+            border-radius: 82px;
+            /* border: 2px solid green; */
+        }
+        .home .title{
+            /* border: 2px solid green; */
+            color:#353935;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            margin: 8px 0px 0px 0px;
+        }
+
 
 
     @media screen and (max-width: 1000px) {
@@ -166,19 +236,20 @@
             transform: translateX(100%);
             transition: transform 0.4s ease-in-out;
         }
-         /* When active class added */
-    .menu.active {
-        transform: translateX(0%);
-    }
 
-    .menu li {
-        list-style: none;
-        font-size: 20px;
-    }
+        /* When active class added */
+        .menu.active {
+            transform: translateX(0%);
+        }
 
-    .menu a {
-        color: #353935;
-    }
+        .menu li {
+            list-style: none;
+            font-size: 20px;
+        }
+
+        .menu a {
+            color: #353935;
+        }
     }
 </style>
 
@@ -211,10 +282,34 @@
                 target="_blank"><button>Download CV <img src="images/cv.png"></button></a>
         </ul>
     </nav>
-    <!-- <div class="home" id="home">
-        i am home
+    <div class="home" id="home">
+        <div class="image">
+            <img src="images/myphoto.jpg" alt="">
+        </div>
+        <div class="name">
+            <span>Archita Gupta</span>
+        </div>
+        <div class="title">
+            Full-Stack Developer
+        </div>
+        <div class="desc">
+            I enjoy building clean, efficient, and well-designed digital products. I
+            naturally
+            lean toward creativity — whether it’s art, fashion, or design — and that helps me bring strong aesthetics
+            and
+            attention to detail into my work. I like making things that look good and work smoothly.
+        </div>
+        <div class="buttons">
+            <button>Hire me</button>
+            <button>Download CV</button>
+        </div>
+        <div class="logos">
+            <img src="images/github.png" alt="">
+            <img src="images/linkedin.png" alt="">
+        </div>
+
     </div>
-    <div class="about" id="about">
+    <!-- <div class="about" id="about">
         i am about
     </div>
     <div class="qualifications" id="qualifications">
@@ -228,7 +323,7 @@
     </div>
     <div class="contact" id="contact">
         i am about
-    </div> -->
+    </div>  -->
     <script src="script.js"></script>
 </body>
 
