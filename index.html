@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archita Gupta</title>
-    <link rel="shortcut icon" href="images/portfolio icon 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/portfolio icon 4.png" type="image/x-icon">
 </head>
 <style>
     * {
@@ -182,7 +182,6 @@
         display: flex;
         margin-top: 58px;
         gap: 20px;
-
     }
 
     .home .first .logos img {
@@ -191,11 +190,7 @@
         /* border: 2px solid green; */
     }
 
-    .about {
-        height: 100vh;
-        width: 100vw;
-        background-color: rgb(42, 151, 165);
-    }
+
 
     li:hover,
     button:hover {
@@ -237,6 +232,64 @@
         cursor: pointer;
     }
 
+    nav ul li img {
+        height: 32px;
+        visibility: hidden;
+    }
+
+    .about {
+        height: 100vh;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .about .section1 {
+        border: 2px solid blue;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 450;
+        /* border: 2px solid black; */
+        color: #353935;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .about .section2 {
+        border: 2px solid blue;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 450;
+        /* border: 2px solid black; */
+        color: #353935;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .box1 {
+        border: 2px solid red;
+        background-color: rgba(8, 179, 237, 0.274);
+        padding: 8px;
+    }
+
+    .box1 .heading {
+        color: blue;
+        font-weight: 800;
+    }
+
+    .box1 .subheading {
+        color: black;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .box1 p{
+        line-height: 0.1;
+    }
+
     @media screen and (max-width: 900px) {
         nav {
             justify-content: space-between;
@@ -268,29 +321,30 @@
             transition: transform 0.4s ease-in-out;
         }
 
-        /* When active class added */
         .menu.active {
             transform: translateX(0%);
         }
 
         .home {
-            /* border: 2px solid green; */
             min-height: 85vh;
-            /* border: 2px solid red; */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
-            /* background-color: rgb(223, 165, 165); */
         }
 
         .home .first {
-            /* border: 2px solid green; */
+            margin-top: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        .home .image {
+            /* border: 2px solid red; */
+            /* margin-bottom: 0px; */
         }
 
         .home .image img {
@@ -306,15 +360,19 @@
             transform: scale(1.03);
         }
 
+        .home .first .name {
+            /* border: 2px solid green; */
+            margin-top: 0px;
+        }
+
         .home .first .name span {
             color: #00416A;
             font-weight: 700;
-            font-size: 36px;
+            font-size: 31px;
             padding: 4px 32px;
             /* border: 2px solid green; */
             border-radius: 12px;
             background-color: #78c9fc33;
-            margin-top: 30px;
             display: inline-block;
         }
 
@@ -367,10 +425,19 @@
 
         .home .first .logos img {
             height: 52px;
-            border-radius: 82px;
+            border-radius: 50%;
             /* border: 2px solid green; */
         }
 
+        nav ul .back {
+            position: absolute;
+            top: 30px;
+            margin: auto;
+        }
+
+        nav ul li img {
+            visibility: visible;
+        }
     }
 </style>
 
@@ -381,6 +448,7 @@
             <img src="images/lines.png" alt="">
         </div>
         <ul class="menu">
+            <li class="back"><img src="images/back.png" alt=""></li>
             <a href="#home">
                 <li>Home</li>
             </a>
@@ -436,9 +504,40 @@
 
     </div>
     <!-- <div class="about" id="about">
-        i am about
-    </div>
-    <div class="qualifications" id="qualifications">
+        <h2>About Me</h2>
+        <div class="section1">
+            <p>I'm a passionate Fullstack Developer with experience in building responsive and user-friendly web
+                applications. <br> <br>
+
+                My journey in web development started with a strong foundation in HTML, CSS, and JavaScript, and has
+                evolved to include modern frameworks and technologies like React, Node.js, and MongoDB. <br> <br>
+
+                I'm constantly learning and exploring new technologies to enhance my skills and deliver better
+                solutions. I believe in writing clean, maintainable code and creating intuitive user experiences.</p>
+        </div>
+        <div class="section2">
+            <div class="box1">
+                <div class="heading">Education</div>
+                <div class="subheading">
+                    Bachelor of Technology
+                </div>
+                Computer Science Engineering <br>
+                Vellore Institute of Technology, 2021-2025
+            </div>
+            <div class="box2">
+                <div>
+                    Interests
+                </div>
+                <ul>
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Open Source Contribution</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!--<div class="qualifications" id="qualifications">
         i am about
     </div>
     <div class="experience" id="experience">
