@@ -6,440 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archita Gupta</title>
     <link rel="shortcut icon" href="images/portfolio icon 4.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #fafaf9;
-    }
-
-    nav {
-        height: auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: larger;
-        padding: 20px;
-        position: sticky;
-        top: 0px;
-        z-index: 10;
-        background-color: #fafaf9;
-    }
-
-
-    .logo {
-        font-size: 28px;
-        font-weight: 700;
-        color: #01558a;
-        transition: transform 0.3s ease;
-        transition: color 0.3s ease 2s;
-    }
-
-    .logo:hover {
-        transform: scale(1.02);
-        /* font-size: 33px; */
-        /* font-weight: 750; */
-        color: #01558a;
-    }
-
-    nav ul {
-        /* background-color: beige; */
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        font-size: 18px;
-        color: #353935;
-    }
-
-    nav ul li {
-        list-style: none;
-    }
-
-    nav ul button {
-        background-color: #E7E7E7;
-        padding: 5px;
-        font-size: 16px;
-        color: #353935;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 4px;
-        box-shadow: 0px 1px 5px #35393586;
-        border: none;
-    }
-
-    nav ul button img {
-        height: 22px;
-    }
-
-    .home {
-        min-height: 70vh;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        padding: 40px;
-        align-items: center;
-        gap: 23px;
-        /* background-color: rgb(223, 165, 165); */
-    }
-
-    .home .first {
-        max-width: 700px;
-        /* border: 2px solid green; */
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-    }
-
-    .home .image {
-        /* border: 2px solid green; */
-    }
-
-    .home .image img {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        border: 4px solid rgba(32, 110, 187, 0.179);
-        height: 400px;
-        width: 400px;
-        border-radius: 100%;
-        transition: transform 0.3s ease;
-    }
-
-    .home .image img:hover {
-        transform: scale(1.03);
-    }
-
-    .home .first .name {
-        margin-top: 12px;
-        /* border: 2px solid brown; */
-    }
-
-    .home .first .name span {
-        color: #00416A;
-        font-weight: 800;
-        font-size: 28px;
-        padding: 4px 6px;
-        /* border: 2px solid green; */
-        border-radius: 12px;
-        background-color: #78c9fc33;
-        display: inline-block;
-    }
-
-    .home .first .title {
-        /* border: 2px solid green; */
-        color: #4b4e4b;
-        font-size: 60px;
-        font-weight: 500;
-        margin-top: 8px;
-    }
-
-    .home .first .desc {
-        font-size: 18px;
-        /* border: 2px solid black; */
-        color: #353935;
-        /* max-width: 90%; */
-        text-align: justify;
-        margin-top: 70px;
-        line-height: 1.6;
-    }
-
-    .home .first .buttons {
-        display: flex;
-        /* border: 2px solid green; */
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .home .first .buttons button {
-        padding: 15px 40px;
-        font-size: 17px;
-        border-radius: 10px;
-        border: none;
-        background-color: #00416A;
-        color: white;
-        transition: translate 0.3s ease-out;
-    }
-
-    .home .first .buttons button:hover {
-        translate: 0px -2px;
-        background-color: #01558a;
-    }
-
-    .home .first .logos img {
-        transition: translate 0.3s ease-out;
-    }
-
-    .home .first .logos img:hover {
-        translate: 0px -2px;
-    }
-
-    .home .first .logos {
-        display: flex;
-        margin-top: 58px;
-        gap: 20px;
-    }
-
-    .home .first .logos img {
-        height: 52px;
-        border-radius: 82px;
-        /* border: 2px solid green; */
-    }
-
-
-
-    li:hover,
-    button:hover {
-        cursor: pointer;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    a:link {
-        color: #353935;
-        /* Styles for unvisited links */
-    }
-
-    a:visited {
-        color: #353935;
-        /* Styles for visited links */
-    }
-
-    a:hover {
-        color: #00416A;
-        font-weight: 500;
-        /* Styles when hovering over a link */
-    }
-
-    a:active {
-        color: #00416A;
-        /* Styles when a link is being clicked */
-    }
-
-    nav {
-        box-shadow: 0px 1px 5px #35393586;
-    }
-
-    .lines img {
-        visibility: hidden;
-        height: 30px;
-        cursor: pointer;
-    }
-
-    nav ul li img {
-        height: 32px;
-        visibility: hidden;
-    }
-
-    .about {
-        height: 100vh;
-        border: 2px solid black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 30px;
-    }
-
-    .about .section1 {
-        border: 2px solid blue;
-        width: 100%;
-        font-size: 18px;
-        font-weight: 450;
-        /* border: 2px solid black; */
-        color: #353935;
-        text-align: left;
-        line-height: 1.6;
-    }
-
-    .about .section2 {
-        border: 2px solid blue;
-        width: 100%;
-        font-size: 18px;
-        font-weight: 450;
-        /* border: 2px solid black; */
-        color: #353935;
-        text-align: left;
-        line-height: 1.6;
-    }
-
-    .box1 {
-        border: 2px solid red;
-        background-color: rgba(8, 179, 237, 0.274);
-        padding: 8px;
-    }
-
-    .box1 .heading {
-        color: blue;
-        font-weight: 800;
-    }
-
-    .box1 .subheading {
-        color: black;
-        font-size: 15px;
-        font-weight: 800;
-    }
-
-    .box1 p{
-        line-height: 0.1;
-    }
-
-    @media screen and (max-width: 900px) {
-        nav {
-            justify-content: space-between;
-        }
-
-        .lines img {
-            visibility: visible;
-        }
-
-        .logo {
-            font-size: 24px;
-        }
-
-        .menu {
-            /* visibility:hidden; */
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            display: grid;
-            width: 150px;
-            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            background-color: #ffffff;
-            padding: 90px 20px;
-            transform: translateX(100%);
-            transition: transform 0.4s ease-in-out;
-        }
-
-        .menu.active {
-            transform: translateX(0%);
-        }
-
-        .home {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-        }
-
-        .home .first {
-            margin-top: 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .home .image {
-            /* border: 2px solid red; */
-            /* margin-bottom: 0px; */
-        }
-
-        .home .image img {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-            border: 4px solid rgba(32, 110, 187, 0.179);
-            height: 260px;
-            width: 260px;
-            border-radius: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .home .image img:hover {
-            transform: scale(1.03);
-        }
-
-        .home .first .name {
-            /* border: 2px solid green; */
-            margin-top: 0px;
-        }
-
-        .home .first .name span {
-            color: #00416A;
-            font-weight: 700;
-            font-size: 31px;
-            padding: 4px 32px;
-            /* border: 2px solid green; */
-            border-radius: 12px;
-            background-color: #78c9fc33;
-            display: inline-block;
-        }
-
-        .home .first .title {
-            /* border: 2px solid green; */
-            color: #4b4e4b;
-            font-size: 22px;
-            font-weight: 500;
-            margin-top: 12px;
-        }
-
-        .home .first .desc {
-            font-size: 18px;
-            /* border: 2px solid black; */
-            color: #353935;
-            max-width: 90%;
-            text-align: center;
-            margin-top: 30px;
-            line-height: 1.6;
-        }
-
-        .home .first .buttons {
-            display: flex;
-            /* border: 2px solid green; */
-            gap: 12px;
-            margin: 18px;
-        }
-
-        .home .first .buttons button {
-            padding: 13px 30px;
-            font-size: 16px;
-            border-radius: 10px;
-            border: none;
-            background-color: #00416A;
-            color: white;
-            transition: translate 0.3s ease-out;
-        }
-
-        .home .first .buttons button:hover {
-            translate: 0px -2px;
-            background-color: #01558a;
-        }
-
-        .home .first .logos {
-            display: flex;
-            /* justify-content: center; */
-            /* margin: 52px; */
-            gap: 15px;
-        }
-
-        .home .first .logos img {
-            height: 52px;
-            border-radius: 50%;
-            /* border: 2px solid green; */
-        }
-
-        nav ul .back {
-            position: absolute;
-            top: 30px;
-            margin: auto;
-        }
-
-        nav ul li img {
-            visibility: visible;
-        }
-    }
-</style>
 
 <body>
     <nav>
@@ -503,44 +72,125 @@
         </div>
 
     </div>
-    <!-- <div class="about" id="about">
-        <h2>About Me</h2>
-        <div class="section1">
-            <p>I'm a passionate Fullstack Developer with experience in building responsive and user-friendly web
-                applications. <br> <br>
+    <div class="about columns" id="about">
+        <h2>About me</h2>
+        <div class="desc">
+            I'm a passionate Fullstack Developer with experience in building responsive and user-friendly web
+            applications. Currently working as a Fullstack Developer Intern at GenixBit, I specialize in creating
+            efficient and scalable solutions.
 
-                My journey in web development started with a strong foundation in HTML, CSS, and JavaScript, and has
-                evolved to include modern frameworks and technologies like React, Node.js, and MongoDB. <br> <br>
+            My journey in web development started with a strong foundation in HTML, CSS, and JavaScript, and has evolved
+            to include modern frameworks and technologies like React, Node.js, and MongoDB.
 
-                I'm constantly learning and exploring new technologies to enhance my skills and deliver better
-                solutions. I believe in writing clean, maintainable code and creating intuitive user experiences.</p>
+            I'm constantly learning and exploring new technologies to enhance my skills and deliver better solutions. I
+            believe in writing clean, maintainable code and creating intuitive user experiences.
         </div>
-        <div class="section2">
-            <div class="box1">
-                <div class="heading">Education</div>
-                <div class="subheading">
-                    Bachelor of Technology
+        <div class="cards">
+            <div class="card">
+                <div class="card-heading">
+                    Frontend
                 </div>
-                Computer Science Engineering <br>
-                Vellore Institute of Technology, 2021-2025
+                <div class="capsules">
+                    <div class="capsule">HTML</div>
+                    <div class="capsule">CSS</div>
+                    <div class="capsule">JavaScript</div>
+                    <div class="capsule">React.js</div>
+                    <div class="capsule">Tailwind CSS</div>
+                </div>
             </div>
-            <div class="box2">
-                <div>
-                    Interests
+            <div class="card">
+                <div class="card-heading">
+                    Backend
                 </div>
-                <ul>
-                    <li>Web Development</li>
-                    <li>UI/UX Design</li>
-                    <li>Open Source Contribution</li>
-                    <li>Problem Solving</li>
-                </ul>
+                <div class="capsules">
+                    <div class="capsule">Node.js</div>
+                    <div class="capsule">Express.js</div>
+                    <div class="capsule">Rest APIs</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-heading">
+                    Databases
+                </div>
+                <div class="capsules">
+                    <div class="capsule">MySQL</div>
+                    <div class="capsule">MongoDB</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-heading">
+                    Tools & Others
+                </div>
+                <div class="capsules">
+                    <div class="capsule">Git</div>
+                    <div class="capsule">GitHub</div>
+                    <div class="capsule">Figma</div>
+                    <div class="capsule">Canva</div>
+                    <div class="capsule">VS Code</div>
+                </div>
             </div>
         </div>
-    </div> -->
-    <!--<div class="qualifications" id="qualifications">
-        i am about
     </div>
-    <div class="experience" id="experience">
+
+    <div class="qualifications columns" id="qualifications">
+        <h2>Qualifications</h2>
+        <div class="card">
+            <div class="card-heading">
+                Vellore Institute of Technology
+            </div>
+            <div class="card-subheading">
+                Bachelor of Technology - BTech, Computer Science and Engineering
+            </div>
+            <div class="card-content">
+                Aug 2021 - May 2025
+                <br>
+                Grade: 8.89 CGPA
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-heading">
+                St Joseph's Convent School, Sagar MP
+            </div>
+            <div class="card-subheading">
+                Higher Secondary School, Science
+            </div>
+            <div class="card-content">
+                2018 - 2020
+                <br>
+                Grade: 87.6%
+            </div>
+            <div class="skills">
+                Skills:
+                <div class="capsules">
+                    <div class="capsule">Java</div>
+                    <div class="capsule">Object-Oriented Programming (OOP) </div>
+                    <div class="capsule">Data Structures</div>
+                    <div class="capsule">
+                        Database Management Systems (DBMS)</div>
+
+                    <div class="capsule">Software Development</div>
+                    <div class="capsule">Computer Networks</div>
+                    <div class="capsule">Operating Systems</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-heading">
+                St Joseph's Convent School, Sagar MP
+            </div>
+            <div class="card-subheading">
+                Secondary School
+            </div>
+            <div class="card-content">
+                2017-2018
+                <br>
+                Grade: 94.16%
+            </div>
+        </div>
+
+    </div>
+    <!--<div class="experience" id="experience">
         i am about
     </div>
     <div class="projects" id="projects">
