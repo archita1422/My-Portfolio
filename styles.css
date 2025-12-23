@@ -69,7 +69,7 @@ nav ul button img {
 
 .home,
 .about {
-  min-height: 70vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
